@@ -12,6 +12,13 @@
             overflow-wrap: break-word;
 
         }
+        .left {
+            
+            letter-spacing: 22px;
+            width: 5px;
+            height: 5px;
+        }
+        
          </style>
     <title>CIKLAI</title>
 </head>
@@ -79,8 +86,11 @@ echo '4---';
 echo '<br>';
 echo '<br>';
 
-for ($z=0;$z < 1000; $z++) { 
-    echo "*";
+for ($z=0;$z < 100; $z++) { 
+        for ($l=0;$l < 100; $l++) { 
+        echo "<span class='left'>*</span>";
+        
+}
 }
 echo '<br>';
 echo '<br>';
@@ -90,19 +100,46 @@ echo '<br>';
 echo '<br>';
 
 $Moneta = rand(0,1);
+
 if ($Moneta == 1) {
-    echo "S";
+    echo "Skaicius";
 } else {
-    echo "H";
+    echo "Herbas";
 }
+
 echo '<br>';
+echo '<br>';
+echo 'Scenarijus A iskrito Herbas:';
+echo '<br>';
+
 //SCENARIJUS A//
 $Moneta = 0;
 if ($Moneta == 1) {
-    echo "S";
+    echo "Skaicius";
 } else {
-    echo "H";
+    echo "Herbas";
 }
+
+echo '<br>';
+echo '<br>';
+
+//SCENARIJUS B//
+$counter = 0;
+
+echo 'Scenarijus B iskrito Herbas 3 kart:';
+echo '<br>';
+
+
+$counter = rand(0,1);
+while ($counter < 10) {
+    $counter;
+    if($counter === 3) {
+        break;
+    }
+    $counter++;
+}
+echo $counter;
+
 
 
 echo '<br>';
@@ -144,11 +181,6 @@ echo '<br>';
 echo '8---';
 echo '<br>';
 echo '<br>';
-
-
-
-
-
 
 ?>
 
