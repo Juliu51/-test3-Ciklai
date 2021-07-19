@@ -37,6 +37,7 @@ for ($i=0; $i < 400; $i++) {
 }
 echo '<br>';
 echo '<br>';
+
 //////ANTRA UZDUOTIS///////////
 echo '2---';
 echo '<br>';
@@ -63,6 +64,7 @@ echo '<p style="color:blue">' . 'Daugiau uz 150 yra: ' . $count . '</p>';
 
 echo '<br>';
 echo '<br>';
+
 //////TRECIA UZDUOTIS///////////
 echo '3---';
 echo '<br>';
@@ -72,23 +74,37 @@ $rand = rand(3000,4000);
 $numNew = '';
 $num = array();
 
-for ($k=0; $k < $rand; $k++) { 
-    if(($k+1) % 77 == 0) {
-       $num[] = $k+1;
+for ($k=1; $k < $rand; $k++) { 
+    if($k % 77 == 0) {
+       $num[] = $k;
 }
 }
 $numNew = implode(",", $num);
 echo($numNew);
+
+$result = "";
+for ($k=1; $k < $rand; $k++) { 
+    if($k % 77 == 0) {
+      $result .= $k.",";
+    }
+}
 echo '<br>';
 echo '<br>';
+echo substr($result,0,-1);
+
+
+
+echo '<br>';
+echo '<br>';
+
 //////KETVIRTA UZDUOTIS///////////
 echo '4---';
 echo '<br>';
 echo '<br>';
 $sonas = 50;
 
-for ($z=0; $z < 50; $z++) { 
-    for ($c=0; $c < 50; $c++) { 
+for ($z=0; $z < 50; $z++) { //Y
+    for ($c=0; $c < 50; $c++) {//X 
         if ($z == $c || $z == ($sonas - 1 - $c)) {
             echo '<span style="color:red">   *</span>';
         } else {
@@ -102,6 +118,7 @@ for ($z=0; $z < 50; $z++) {
 
 echo '<br>';
 echo '<br>';
+
 //////SESTA UZDUOTIS///////////
 echo '6---';
 echo '<br>';
@@ -134,11 +151,32 @@ do {
 } while ($counts < 3);
 echo '<br>';
 echo '<br>';
+
 /////SCENARIJUS C/////
+$H1 = 0;
 
+for ($i=0; $i < 100 ; $i++) { 
+    $metimas = rand(0,1);
+    if ($metimas == 1){
+        echo "Skaicius";
+        $H1= 0;
+        echo "<br>";
+        echo "<br>";
+    } else {
+        $H1++;
+        echo "Herbas";
+        echo "<br>";
+        echo "<br>";
+        if ($H1 == 3) {
+            echo "Herbas iskrito 3kartus is eiles";
+            break;
+        }
+    }
+}
 
 echo '<br>';
 echo '<br>';
+
 //////SEPTINTA UZDUOTIS///////////
 echo '7---';
 echo '<br>';
@@ -172,6 +210,11 @@ echo "Zaidima Laimi Petras";
 
 echo '<br>';
 echo '<br>';
+//////ASTUNTAS UZDUOTIS///////////
+echo '8---';
+echo '<br>';
+echo '<br>';
+
 //////11 UZDUOTIS///////////
 echo '11---';
 echo '<br>';
