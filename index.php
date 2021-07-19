@@ -177,12 +177,39 @@ echo "Zaidima Laimi Petras";
 
 echo '<br>';
 echo '<br>';
-//////ASTUNTA UZDUOTIS///////////
-echo '8---';
+//////11 UZDUOTIS///////////
+echo '11---';
 echo '<br>';
 echo '<br>';
 
+$len = 50;   
+$min = 1;  
+$max = 200;  
+$range = []; 
+$pirminis = [];
+
+
+foreach (range(0, $len - 1) as $i) {
+    while(in_array($num = mt_rand($min, $max), $range));
+    $range[] = $num;
+    shuffle($range);
+  if ($num % 2 != 0 && $num % 3 != 0) {
+      $pirminis[] = $num;
+    } 
+    sort($pirminis);
+}
+echo '<br>';
+    $eilute = implode(" ", $range);
+    $pirminis1 = implode(" ", $pirminis);
+    
+echo $eilute;
+echo '<br>';
+echo "Pirminiai: " . $pirminis1;
+      
+    echo '<br>';
+    echo '<br>';
 ?>
+
 
 </body>
 </html>
