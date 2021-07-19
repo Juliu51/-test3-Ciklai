@@ -85,13 +85,21 @@ echo '<br>';
 echo '4---';
 echo '<br>';
 echo '<br>';
+$sonas = 50;
 
-for ($z=0;$z < 100; $z++) { 
-        for ($l=0;$l < 100; $l++) { 
-        echo "<span class='left'>*</span>";
-        
+for ($z=0; $z < 50; $z++) { 
+    for ($c=0; $c < 50; $c++) { 
+        if ($z == $c || $z == ($sonas - 1 - $c)) {
+            echo '<span style="color:red">   *</span>';
+        } else {
+            echo '<span>   *</span>';
+        }
+    }
+    echo '<br>';
 }
-}
+    echo '<br>';
+
+
 echo '<br>';
 echo '<br>';
 //////SESTA UZDUOTIS///////////
@@ -99,47 +107,34 @@ echo '6---';
 echo '<br>';
 echo '<br>';
 
-$Moneta = rand(0,1);
 
-if ($Moneta == 1) {
-    echo "Skaicius";
-} else {
-    echo "Herbas";
-}
-
-echo '<br>';
-echo '<br>';
-echo 'Scenarijus A iskrito Herbas:';
-echo '<br>';
-
-//SCENARIJUS A//
-$Moneta = 0;
-if ($Moneta == 1) {
-    echo "Skaicius";
-} else {
-    echo "Herbas";
-}
-
-echo '<br>';
-echo '<br>';
-
-//SCENARIJUS B//
-$counter = 0;
-
-echo 'Scenarijus B iskrito Herbas 3 kart:';
-echo '<br>';
-
-
-$counter = rand(0,1);
-while ($counter < 10) {
-    $counter;
-    if($counter === 3) {
-        break;
+do {
+    $Moneta = rand(0,1);
+    if ($Moneta == 1) {
+        echo "Skaicius ";
+    } else {
+        echo "Herbas";
     }
-    $counter++;
-}
-echo $counter;
+} while ($Moneta == 1);     ////SCENARIJUS A
 
+echo '<br>';
+echo '<br>';
+
+//SCENARIJUS B //////
+$counts = 0;
+
+do {
+    $Moneta = rand(0,1);
+    if ($Moneta == 1) {
+        echo "Skaicius ";
+    } else {
+        echo "Herbas ";
+        $counts++;
+    }
+} while ($counts < 3);
+echo '<br>';
+echo '<br>';
+/////SCENARIJUS C/////
 
 
 echo '<br>';
