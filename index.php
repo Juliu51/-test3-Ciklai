@@ -104,6 +104,52 @@ if ($Moneta == 1) {
     echo "H";
 }
 
+
+echo '<br>';
+echo '<br>';
+//////SEPTINTA UZDUOTIS///////////
+echo '7---';
+echo '<br>';
+echo '<br>';
+
+$Petras = 0;
+$Kazys = 0;
+
+for ($sumK=0; $sumK <= 222 ; $sumK++) { 
+    $Krand= rand(5,25);
+    $sumK += $Krand;
+}
+echo "Kazio taskai: " . $sumK;
+echo '<br>';
+
+for ($sumP=0; $sumP <= 222 ; $sumP++) { 
+    $Prand= rand(10,20);
+    $sumP += $Prand;
+}
+echo "Petro taskai: " . $sumP;
+echo '<br>';
+
+if ($sumP > $sumK) {
+echo "Zaidima Laimi Petras";
+    # code...
+} else if($sumP < $sumK) {
+    echo "Zaidima Laimi Kazys";
+} else {
+    echo "Lygiosios";
+}
+
+echo '<br>';
+echo '<br>';
+//////ASTUNTA UZDUOTIS///////////
+echo '8---';
+echo '<br>';
+echo '<br>';
+
+
+
+
+
+
 ?>
 
 </body>
